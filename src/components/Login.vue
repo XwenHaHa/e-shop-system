@@ -44,7 +44,7 @@ export default {
       // 这是登录表单的数据绑定对象
       loginForm: {
         username: 'admin',
-        password: '123456',
+        password: '123456'
       },
       // 这是表单的验证对象
       loginFormRules: {
@@ -55,8 +55,8 @@ export default {
             min: 3,
             max: 11,
             message: '长度在 3 到 11 个字符',
-            trigger: 'blur',
-          },
+            trigger: 'blur'
+          }
         ],
         // 这是密码的校验规则
         password: [
@@ -65,10 +65,10 @@ export default {
             min: 6,
             max: 15,
             message: '长度在 6 到 15 个字符',
-            trigger: 'blur',
-          },
-        ],
-      },
+            trigger: 'blur'
+          }
+        ]
+      }
     }
   },
   methods: {
@@ -77,7 +77,7 @@ export default {
       this.$refs.loginFormref.resetFields()
     },
     login() {
-      this.$refs.loginFormref.validate(async (valid) => {
+      this.$refs.loginFormref.validate(async valid => {
         if (!valid) return
         // 对象的解构赋值 如果返回的值是Promise那么就马上用async和await进行优化
         const { data: res } = await this.$http.post('login', this.loginForm)
@@ -91,8 +91,8 @@ export default {
         // 2.通过编程式导航跳转到后台主页，路由地址是/home
         this.$router.push('/home')
       })
-    },
-  },
+    }
+  }
 }
 </script>
 <style lang="less" scoped>
