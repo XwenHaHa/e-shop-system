@@ -1,4 +1,4 @@
-# Eshop-system
+# EShop-system
 
 ## Project setup
 ```
