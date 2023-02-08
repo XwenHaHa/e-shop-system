@@ -1,4 +1,4 @@
-# vue_system
+# Eshop-system
 
 ## Project setup
 ```
